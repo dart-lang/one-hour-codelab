@@ -10,24 +10,36 @@ final String TREASURE_KEY = 'pirateName';
 
 ButtonElement genButton;
 
-void  main() {
-  querySelector('#inputName').onInput.listen(updateBadge);
+main() {
+  var inputField = querySelector('#inputName');
   genButton = querySelector('#generateButton');
-  genButton.onClick.listen(generateBadge);
-  
+  initEventListeners(inputField);
+
   setBadgeName(getBadgeNameFromStorage());
+}
+
+initEventListeners(var inputField) async {
+  await for (var event in inputField.onInput) {
+    updateBadge(event);
+  }
+
+  await for (var event in genButton.onClick) {
+    generateBadge(event);
+  }
 }
 
 void updateBadge(Event e) {
   String inputName = (e.target as InputElement).value;
-  
+
   setBadgeName(new PirateName(firstName: inputName));
   if (inputName.trim().isEmpty) {
-    genButton..disabled = false
-             ..text = 'Aye! Gimme a name!';
+    genButton
+      ..disabled = false
+      ..text = 'Aye! Gimme a name!';
   } else {
-    genButton..disabled = true
-             ..text = 'Arrr! Write yer name!';
+    genButton
+      ..disabled = true
+      ..text = 'Arrr! Write yer name!';
   }
 }
 
@@ -53,7 +65,6 @@ PirateName getBadgeNameFromStorage() {
 }
 
 class PirateName {
-  
   static final Random indexGen = new Random();
 
   String _firstName;
@@ -82,12 +93,31 @@ class PirateName {
 
   String get jsonString => '{ "f": "$_firstName", "a": "$_appellation" } ';
 
-  String get pirateName => _firstName.isEmpty ? '' : '$_firstName the $_appellation';
+  String get pirateName =>
+      _firstName.isEmpty ? '' : '$_firstName the $_appellation';
 
   static final List names = [
-    'Anne', 'Mary', 'Jack', 'Morgan', 'Roger',
-    'Bill', 'Ragnar', 'Ed', 'John', 'Jane' ];
+    'Anne',
+    'Mary',
+    'Jack',
+    'Morgan',
+    'Roger',
+    'Bill',
+    'Ragnar',
+    'Ed',
+    'John',
+    'Jane'
+  ];
   static final List appellations = [
-    'Jackal', 'King', 'Red', 'Stalwart', 'Axe',
-    'Young', 'Brave', 'Eager', 'Wily', 'Zesty'];
+    'Jackal',
+    'King',
+    'Red',
+    'Stalwart',
+    'Axe',
+    'Young',
+    'Brave',
+    'Eager',
+    'Wily',
+    'Zesty'
+  ];
 }
