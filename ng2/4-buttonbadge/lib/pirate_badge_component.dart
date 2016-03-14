@@ -9,7 +9,6 @@ class PirateBadgeComponent {
   String badgeName = '';
   String buttonText = 'Aye! Gimme a name!';
   bool enableButton = true;
-  bool enableInput = true;
 
   void generateBadge() {
     badgeName = 'Anne Bonney';

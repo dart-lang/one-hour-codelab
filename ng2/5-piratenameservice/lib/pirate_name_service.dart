@@ -12,24 +12,26 @@ class PirateNameService {
 
   final List _names = [
     'Anne', 'Mary', 'Jack', 'Morgan', 'Roger',
-    'Bill', 'Ragnar', 'Ed', 'John', 'Jane' ];
+    'Bill', 'Ragnar', 'Ed', 'John', 'Jane'
+  ];
   final List _appellations = [
     'Jackal', 'King', 'Red', 'Stalwart', 'Axe',
-    'Young', 'Brave', 'Eager', 'Wily', 'Zesty'];
+    'Young', 'Brave', 'Eager', 'Wily', 'Zesty'
+  ];
 
-  String randomFirstName() {
+  String _randomFirstName() {
     return (_names[_indexGen.nextInt(_names.length)]);
   }
 
-  String randomAppellation() {
+  String _randomAppellation() {
     return (_appellations[_indexGen.nextInt(_appellations.length)]);
   }
 
   String getPirateName(String firstName) {
     if (firstName == null || firstName.trim().isEmpty) {
-      firstName = randomFirstName();
+      firstName = _randomFirstName();
     }
-    var appellation = randomAppellation();
+    var appellation = _randomAppellation();
 
     return '$firstName the $appellation';
   }
