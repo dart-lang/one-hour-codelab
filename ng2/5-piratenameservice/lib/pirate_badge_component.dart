@@ -2,12 +2,13 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
-import 'package:angular2/angular2.dart';
+import 'package:angular2/core.dart';
 import 'pirate_name_service.dart';
 
 @Component(
     selector: 'pirate-badge',
     templateUrl: 'pirate_badge_component.html',
+    styleUrls: const ['pirate_badge_component.css'],
     providers: const [PirateNameService])
 class PirateBadgeComponent {
   final PirateNameService _nameService;

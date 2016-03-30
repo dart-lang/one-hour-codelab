@@ -4,7 +4,7 @@
 
 import 'dart:math' show Random;
 
-import 'package:angular2/angular2.dart';
+import 'package:angular2/core.dart';
 
 @Injectable()
 class PirateNameService {

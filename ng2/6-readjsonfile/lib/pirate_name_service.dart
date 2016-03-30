@@ -7,7 +7,7 @@ import 'dart:convert';
 import 'dart:html';
 import 'dart:math' show Random;
 
-import 'package:angular2/angular2.dart';
+import 'package:angular2/core.dart';
 
 const _namesPath =
     'https://www.dartlang.org/codelabs/darrrt/files/piratenames.json';
