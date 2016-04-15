@@ -19,13 +19,10 @@ class PirateNameService {
   final _names = <String>[];
   final _appellations = <String>[];
 
-  String _randomFirstName() {
-    return (_names[_indexGen.nextInt(_names.length)]);
-  }
+  String _randomFirstName() => _names[_indexGen.nextInt(_names.length)];
 
-  String _randomAppellation() {
-    return (_appellations[_indexGen.nextInt(_appellations.length)]);
-  }
+  String _randomAppellation() =>
+      _appellations[_indexGen.nextInt(_appellations.length)];
 
   Future readyThePirates() async {
     if (_names.isNotEmpty && _appellations.isNotEmpty) return;
@@ -40,8 +37,7 @@ class PirateNameService {
     if (firstName == null || firstName.trim().isEmpty) {
       firstName = _randomFirstName();
     }
-    var appellation = _randomAppellation();
 
-    return '$firstName the $appellation';
+    return '$firstName the ${_randomAppellation()}';
   }
 }

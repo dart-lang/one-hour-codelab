@@ -35,11 +35,6 @@ class PirateBadgeComponent implements OnInit {
     setBadgeName();
   }
 
-  void setBadgeName([String newName = '']) {
-    if (newName == null) return;
-    badgeName = _nameService.getPirateName(newName);
-  }
-
   void updateBadge(String inputName) {
     setBadgeName(inputName);
     if (inputName.trim().isEmpty) {
@@ -49,5 +44,10 @@ class PirateBadgeComponent implements OnInit {
       buttonText = 'Arrr! Write yer name!';
       enableButton = false;
     }
+  }
+
+  void setBadgeName([String newName = '']) {
+    if (newName == null) return;
+    badgeName = _nameService.getPirateName(newName);
   }
 }
