@@ -7,9 +7,9 @@
 -->
 
 <div class="widgets">
-  <input [disabled]="!enableInput" (input)="updateBadge($event.target.value)"
+  <input [disabled]="!isInputEnabled" (input)="updateBadge($event.target.value)"
          type="text" maxlength="15">
-  <button [disabled]="!enableButton" (click)="generateBadge()">
+  <button [disabled]="!isButtonEnabled" (click)="generateBadge()">
     {{buttonText}}
   </button>
 </div>

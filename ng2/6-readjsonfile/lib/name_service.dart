@@ -13,7 +13,7 @@ const _namesPath =
     'https://www.dartlang.org/codelabs/darrrt/files/piratenames.json';
 
 @Injectable()
-class PirateNameService {
+class NameService {
   final Random _indexGen = new Random();
 
   final _names = <String>[];

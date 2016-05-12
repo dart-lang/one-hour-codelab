@@ -7,7 +7,7 @@ import 'dart:math' show Random;
 import 'package:angular2/core.dart';
 
 @Injectable()
-class PirateNameService {
+class NameService {
   static final Random _indexGen = new Random();
 
   final List _names = [
@@ -19,7 +19,8 @@ class PirateNameService {
     'Young', 'Brave', 'Eager', 'Wily', 'Zesty'
   ];
 
-  String _randomFirstName() => _names[_indexGen.nextInt(_names.length)];
+  String _randomFirstName() =>
+      _names[_indexGen.nextInt(_names.length)];
 
   String _randomAppellation() =>
       _appellations[_indexGen.nextInt(_appellations.length)];

@@ -3,28 +3,38 @@
 // BSD-style license that can be found in the LICENSE file.
 
 import 'package:angular2/core.dart';
+import 'name_service.dart';
 
 @Component(
     selector: 'pirate-badge',
-    templateUrl: 'pirate_badge_component.html',
-    styleUrls: const ['pirate_badge_component.css'])
-class PirateBadgeComponent {
+    templateUrl: 'badge_component.html',
+    styleUrls: const ['badge_component.css'],
+    providers: const [NameService])
+class BadgeComponent {
+  final NameService _nameService;
   String badgeName = '';
   String buttonText = 'Aye! Gimme a name!';
-  bool enableButton = true;
+  bool isButtonEnabled = true;
+
+  BadgeComponent(this._nameService);
 
   void generateBadge() {
-    badgeName = 'Anne Bonney';
+    setBadgeName();
   }
 
   void updateBadge(String inputName) {
-    badgeName = inputName;
+    setBadgeName(inputName);
     if (inputName.trim().isEmpty) {
       buttonText = 'Aye! Gimme a name!';
-      enableButton = true;
+      isButtonEnabled = true;
     } else {
       buttonText = 'Arrr! Write yer name!';
-      enableButton = false;
+      isButtonEnabled = false;
     }
+  }
+
+  void setBadgeName([String newName = '']) {
+    if (newName == null) return;
+    badgeName = _nameService.getPirateName(newName);
   }
 }

@@ -7,24 +7,24 @@ import 'pirate_name_service.dart';
 
 @Component(
     selector: 'pirate-badge',
-    templateUrl: 'pirate_badge_component.html',
-    styleUrls: const ['pirate_badge_component.css'],
-    providers: const [PirateNameService])
-class PirateBadgeComponent implements OnInit {
-  final PirateNameService _nameService;
+    templateUrl: 'badge_component.html',
+    styleUrls: const ['badge_component.css'],
+    providers: const [NameService])
+class BadgeComponent implements OnInit {
+  final NameService _nameService;
   String badgeName = '';
   String buttonText = 'Aye! Gimme a name!';
-  bool enableButton = false;
-  bool enableInput = false;
+  bool isButtonEnabled = false;
+  bool isInputEnabled = false;
 
-  PirateBadgeComponent(this._nameService);
+  BadgeComponent(this._nameService);
 
   ngOnInit() async {
     try {
       await _nameService.readyThePirates();
       //on success
-      enableButton = true;
-      enableInput = true;
+      isButtonEnabled = true;
+      isInputEnabled = true;
     } catch (arrr) {
       badgeName = 'Arrr! No names.';
       print('Error initializing pirate names: $arrr');
@@ -39,10 +39,10 @@ class PirateBadgeComponent implements OnInit {
     setBadgeName(inputName);
     if (inputName.trim().isEmpty) {
       buttonText = 'Aye! Gimme a name!';
-      enableButton = true;
+      isButtonEnabled = true;
     } else {
       buttonText = 'Arrr! Write yer name!';
-      enableButton = false;
+      isButtonEnabled = false;
     }
   }
 
