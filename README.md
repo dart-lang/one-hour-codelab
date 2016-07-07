@@ -17,7 +17,7 @@ Project structure
 -----------------
 
 #### `darrrt/`
-Code samples used by the Avast Ye, Pirates code lab. Each numerical version corresponds to a step in the code lab.
+Code samples used by the original Avast Ye, Pirates code lab. Each numerical version corresponds to a step in the code lab.
 ```
 1-blankbadge/
 2-inputnamebadge/
