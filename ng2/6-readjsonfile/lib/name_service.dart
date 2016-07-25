@@ -10,7 +10,7 @@ import 'dart:math' show Random;
 import 'package:angular2/core.dart';
 
 const _namesPath =
-    'https://www.dartlang.org/codelabs/darrrt/files/piratenames.json';
+    'http://localhost:8080/piratenames.json';
 
 @Injectable()
 class NameService {
