@@ -2,8 +2,10 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
-import 'dart:async';
+import 'dart:async' show Future;
+
 import 'package:angular2/core.dart';
+
 import 'name_service.dart';
 
 @Component(
@@ -24,7 +26,7 @@ class BadgeComponent implements OnInit {
   Future ngOnInit() async {
     try {
       await _nameService.readyThePirates();
-      //on success
+      // on success
       isButtonEnabled = true;
       isInputEnabled = true;
     } catch (arrr) {

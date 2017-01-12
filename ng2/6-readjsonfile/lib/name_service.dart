@@ -13,12 +13,13 @@ const _namesPath = 'https://www.dartlang.org/f/piratenames.json';
 
 @Injectable()
 class NameService {
-  final Random _indexGen = new Random();
+  static final Random _indexGen = new Random();
 
-  final List _names = <String>[];
-  final List _appellations = <String>[];
+  final _names = <String>[];
+  final _appellations = <String>[];
 
-  String _randomFirstName() => _names[_indexGen.nextInt(_names.length)];
+  String _randomFirstName() =>
+      _names[_indexGen.nextInt(_names.length)];
 
   String _randomAppellation() =>
       _appellations[_indexGen.nextInt(_appellations.length)];

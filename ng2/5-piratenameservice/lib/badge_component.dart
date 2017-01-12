@@ -3,6 +3,7 @@
 // BSD-style license that can be found in the LICENSE file.
 
 import 'package:angular2/core.dart';
+
 import 'name_service.dart';
 
 @Component(
