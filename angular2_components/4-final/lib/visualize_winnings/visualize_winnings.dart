@@ -4,8 +4,7 @@
 
 import 'dart:html';
 
-import 'package:angular2/core.dart';
-import 'package:angular2/src/common/directives/ng_style.dart';
+import 'package:angular2/angular2.dart';
 
 enum Color {
   gray, green, gold

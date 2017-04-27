@@ -4,8 +4,6 @@
 
 import 'dart:math';
 
-import 'package:angular2/core.dart';
-
 enum Category { jackpot, win, lose }
 
 abstract class Lottery {

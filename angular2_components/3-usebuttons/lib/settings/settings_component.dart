@@ -2,9 +2,10 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
-import 'package:angular2/core.dart';
-import 'package:angular2/src/common/directives.dart';
-import 'package:angular2_components/angular2_components.dart';
+import 'dart:async';
+
+import 'package:angular2/angular2.dart';
+import 'package:angular_components/angular_components.dart';
 import 'package:components_codelab/lottery/lottery.dart';
 import 'package:components_codelab/settings/settings.dart';
 
@@ -29,8 +30,10 @@ class SettingsComponent implements OnInit {
 
   final yearsOptions = [1, 2, 3, 5, 10];
 
+  final _settingsChanged = new StreamController<Null>();
+
   @Output()
-  EventEmitter<Null> settingsChanged = new EventEmitter<Null>();
+  Stream<Null> get settingsChanged => _settingsChanged.stream;
 
   @Input()
   Settings settings;
@@ -84,6 +87,6 @@ class SettingsComponent implements OnInit {
     settings.strategy = strategy;
     settings.interestRate = isInvesting ? interestRate : 0;
     settings.years = years;
-    settingsChanged.add(null);
+    _settingsChanged.add(null);
   }
 }
