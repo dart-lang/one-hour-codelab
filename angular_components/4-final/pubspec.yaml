@@ -1,5 +1,5 @@
 name: components_codelab
-description: A Dart app that uses Angular 2
+description: An AngularDart app that simulates a lottery
 version: 0.0.1
 
 environment:
