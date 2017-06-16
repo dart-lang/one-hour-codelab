@@ -5,7 +5,7 @@
 
 import 'package:angular2/angular2.dart';
 
-import 'badge_component.dart';
+import 'src/badge_component.dart';
 
 @Component(
   selector: 'my-app',
