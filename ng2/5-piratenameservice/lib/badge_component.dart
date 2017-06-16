@@ -8,10 +8,11 @@ import 'package:angular2/angular2.dart';
 import 'name_service.dart';
 
 @Component(
-    selector: 'pirate-badge',
-    templateUrl: 'badge_component.html',
-    styleUrls: const ['badge_component.css'],
-    providers: const [NameService])
+  selector: 'pirate-badge',
+  templateUrl: 'badge_component.html',
+  styleUrls: const ['badge_component.css'],
+  providers: const [NameService],
+)
 class BadgeComponent {
   final NameService _nameService;
   String badgeName = '';

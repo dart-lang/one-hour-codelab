@@ -21,7 +21,7 @@ class NameService {
     'Ragnar',
     'Ed',
     'John',
-    'Jane'
+    'Jane',
   ];
   final _appellations = <String>[
     'Jackal',
@@ -33,7 +33,7 @@ class NameService {
     'Brave',
     'Eager',
     'Wily',
-    'Zesty'
+    'Zesty',
   ];
 
   String _randomFirstName() => _names[_indexGen.nextInt(_names.length)];
