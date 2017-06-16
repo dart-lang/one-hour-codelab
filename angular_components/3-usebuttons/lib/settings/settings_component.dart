@@ -79,7 +79,6 @@ class SettingsComponent implements OnInit {
     years = settings.years;
   }
 
-
   void settingsUpdated() {
     settings.initialCash = initialCash;
     settings.dailyDisposable = dailyDisposable;

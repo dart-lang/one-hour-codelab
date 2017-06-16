@@ -12,9 +12,7 @@ import 'dart:async';
   selector: 'settings-component',
   styleUrls: const ['settings_component.css'],
   templateUrl: 'settings_component.html',
-  directives: const [
-    NgFor
-  ],
+  directives: const [NgFor],
 )
 class SettingsComponent implements OnInit {
   final initialCashOptions = [0, 10, 100, 1000];
@@ -73,7 +71,6 @@ class SettingsComponent implements OnInit {
     }
     years = settings.years;
   }
-
 
   void settingsUpdated() {
     settings.initialCash = initialCash;
