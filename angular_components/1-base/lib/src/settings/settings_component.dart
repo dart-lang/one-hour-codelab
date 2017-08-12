@@ -3,8 +3,8 @@
 // BSD-style license that can be found in the LICENSE file.
 
 import 'package:angular/angular.dart';
-import 'package:components_codelab/src/lottery/lottery.dart';
-import 'package:components_codelab/src/settings/settings.dart';
+import '../lottery/lottery.dart';
+import '../settings/settings.dart';
 
 import 'dart:async';
 

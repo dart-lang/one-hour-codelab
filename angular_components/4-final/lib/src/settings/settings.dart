@@ -3,7 +3,7 @@
 // BSD-style license that can be found in the LICENSE file.
 
 import 'package:angular/angular.dart';
-import 'package:components_codelab/src/lottery/lottery.dart';
+import '../lottery/lottery.dart';
 
 final DateTime _now = new DateTime.now();
 
