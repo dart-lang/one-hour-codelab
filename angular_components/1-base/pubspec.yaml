@@ -16,8 +16,6 @@ dev_dependencies:
 transformers:
 - angular:
     entry_points: web/main.dart
-    resolved_identifiers:
-      Random: 'dart:math'
 - dart_to_js_script_rewriter
 
 web:
