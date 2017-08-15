@@ -6,9 +6,11 @@ These are small Dart samples used by the following codelabs:
 
 * [AngularDart Components Lottery Simulator][] Beautify a web app by converting its vanilla HTML elements to Material
   Design components that are widely used in Google’s Dart apps.
-* (**Deprecated**) [Avast Ye Pirates][ng2-codelab] where you learn to build an Angular 2 web app.
-* (**Deprecated**) [Original pirate codelab written using dart:html][client-codelab], where you learn to build a web app. This lab should take about an hour to complete.
-* (**Needs updates**) [Beware the Nest o' Pirates][server-codelab] which shows you how to write a RESTful Dart server.
+* (**Deprecated**) [Avast Ye Pirates][ng2-codelab], where you learn to build an Angular 2 web app.
+* (**Deprecated**) [Original pirate codelab written using dart:html][client-codelab], where you learn to build a web app.
+* (**Needs updates**) [Beware the Nest o' Pirates][server-codelab], which shows you how to write a RESTful Dart server.
+
+For links to the latest Dart codelabs, see [dartlang.org/codelabs](https://www.dartlang.org/codelabs).
 
 Repository structure
 -----------------
